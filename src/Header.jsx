@@ -15,11 +15,19 @@ const Header = ({ theme, toggleTheme }) => {
         >
           Home
         </Link>
+        <a
+          href="https://warpcast.com/~/channel/now-playing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xl font-display font-bold text-gray-800 dark:text-gray-100 hover:underline"
+        >
+          Warpcast Channel
+        </a>
         <Link
           to="/completed-albums"
-          className="text-gray-800 dark:text-gray-100 hover:underline"
+          className="text-xl font-display font-bold text-gray-800 dark:text-gray-100 hover:underline"
         >
-          Completed Albums
+          Curated Albums
         </Link>
       </div>
 
@@ -31,6 +39,7 @@ const Header = ({ theme, toggleTheme }) => {
           target="_blank"
           rel="noopener noreferrer"
           className="text-red-600 dark:text-red-500 hover:text-red-700"
+          aria-label="YouTube Channel"
         >
           <FaYoutube size={24} />
         </a>

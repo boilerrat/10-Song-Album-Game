@@ -128,6 +128,20 @@ const Rulebook = ({ theme, toggleTheme }) => {
             />
           </div>
 
+          {/* Introductory Paragraph */}
+          <p className="mb-8 text-center text-gray-700 dark:text-gray-300">
+            Welcome to the 10 Song Album Game, an album curation game played in the{' '}
+            <a
+              href="https://warpcast.com/~/channel/now-playing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 dark:text-blue-400 hover:underline"
+            >
+              /now-playing
+            </a>{' '}
+            channel of Warpcast. Join us to collaborate on themed playlists by contributing your favorite songs!
+          </p>
+
           {/* Rules */}
           <div className="space-y-6 text-gray-700 dark:text-gray-300">
             {rules.map((rule, index) => {

@@ -10,11 +10,13 @@ const CompletedAlbums = ({ theme, toggleTheme }) => {
     return (
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300">
         {/* Album Art */}
-        <img
-          src={album.coverImage}
-          alt={album.title}
-          className="w-full h-48 object-cover"
-        />
+        <div className="w-full aspect-square">
+          <img
+            src={album.coverImage}
+            alt={album.title}
+            className="object-cover w-full h-full"
+          />
+        </div>
 
         {/* Album Details */}
         <div className="p-6">
@@ -67,7 +69,7 @@ const CompletedAlbums = ({ theme, toggleTheme }) => {
       {/* Content */}
       <div className="py-10 px-4 sm:px-8">
         <h1 className="text-4xl font-display font-bold text-center mb-8 text-gray-800 dark:text-gray-100">
-          Completed Albums
+          Curated Albums
         </h1>
         {/* Albums Grid */}
         <div className="grid gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
