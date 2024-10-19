@@ -1,0 +1,80 @@
+[
+    {
+      "title": "Songs with Animals in the Title",
+      "coverImage": "/images/animal-album-cover.jpg",
+      "tracks": [
+        {
+          "artist": "The Beatles",
+          "title": "Blackbird",
+          "link": "https://youtu.be/Man4Xw8Xypo"
+        },
+        {
+          "artist": "Elton John",
+          "title": "Crocodile Rock",
+          "link": "https://youtu.be/75r0nQu-hMs"
+        },
+        {
+          "artist": "Jefferson Airplane",
+          "title": "White Rabbit",
+          "link": "https://youtu.be/WANNqr-vcx0"
+        },
+        {
+          "artist": "Survivor",
+          "title": "Eye of the Tiger",
+          "link": "https://youtu.be/btPJPFnesV4"
+        },
+        {
+          "artist": "America",
+          "title": "A Horse With No Name",
+          "link": "https://youtu.be/zSAJ0l4OBHM"
+        },
+        {
+          "artist": "The Rolling Stones",
+          "title": "Wild Horses",
+          "link": "https://youtu.be/ZNaqBBjrIZs"
+        },
+        {
+          "artist": "Prince",
+          "title": "When Doves Cry",
+          "link": "https://youtu.be/UG3VcCAlUgE"
+        },
+        {
+          "artist": "Aerosmith",
+          "title": "Monkey on My Back",
+          "link": "https://youtu.be/q38bl9b2rhM"
+        },
+        {
+          "artist": "Foo Fighters",
+          "title": "Monkey Wrench",
+          "link": "https://youtu.be/I7rCNiiNPxA"
+        },
+        {
+          "artist": "Pixies",
+          "title": "Monkey Gone to Heaven",
+          "link": "https://youtu.be/hqrrTyjfz4w"
+        },
+        {
+            "artist": "Grateful Dead",
+            "title": "Dire Wolf",
+            "link": "https://youtu.be/HJwZPfFCmho"
+          },
+        {
+          "artist": "The Presidents of the United States of America",
+          "title": "Peaches",
+          "link": "https://youtu.be/wvAnQqVJ3XQ"
+        },
+        {
+          "artist": "Ylvis",
+          "title": "What Does the Fox Say?",
+          "link": "https://youtu.be/jofNR_WkoCE"
+        },
+        {
+          "artist": "Hall & Oates",
+          "title": "Maneater",
+          "link": "https://youtu.be/yRYFKcMa_Ek"
+        }
+      ],
+      "playlistLink": "https://www.youtube.com/playlist?list=YOUR_PLAYLIST_ID"
+    }
+  ]
+  

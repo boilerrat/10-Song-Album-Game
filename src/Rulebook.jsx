@@ -1,5 +1,6 @@
 // Rulebook.jsx
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import Header from './Header';
 import {
   FaMusic,
   FaGuitar,
@@ -11,7 +12,6 @@ import {
 import { GiMusicalScore, GiPianoKeys } from 'react-icons/gi';
 import { MdQueueMusic } from 'react-icons/md';
 import { IoMdMusicalNotes } from 'react-icons/io';
-import ThemeToggle from './ThemeToggle';
 
 const rules = [
   {
@@ -102,130 +102,105 @@ const rules = [
   },
 ];
 
-const Rulebook = () => {
-  // State to manage theme
-  const [theme, setTheme] = useState('light');
-
-  // On component mount, check for saved theme preference
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    setTheme(savedTheme);
-  }, []);
-
-  // Update the `dark` class on the `html` element when theme changes
-  useEffect(() => {
-    const root = window.document.documentElement;
-    if (theme === 'dark') {
-      root.classList.add('dark');
-    } else {
-      root.classList.remove('dark');
-    }
-    // Save theme preference to localStorage
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  // Function to toggle theme
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
-
+const Rulebook = ({ theme, toggleTheme }) => {
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 py-10 px-4 sm:px-8">
-      <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 dark:text-gray-100 shadow-lg rounded-lg p-8 relative">
-        {/* Theme Toggle Button */}
-        <div className="absolute top-4 left-4">
-          <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-        </div>
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+      {/* Header */}
+      <Header theme={theme} toggleTheme={toggleTheme} />
 
-        {/* Heading with accent color */}
-        <h1 className="text-4xl font-display font-bold text-center mb-4 text-gray-800 dark:text-gray-100">
-          The Legendary{' '}
-          <span className="text-indigo-600 dark:text-indigo-400">
-            10 Song Album Game
-          </span>
-        </h1>
+      {/* Content */}
+      <div className="py-10 px-4 sm:px-8">
+        <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 dark:text-gray-100 shadow-lg rounded-lg p-8">
+          {/* Heading with accent color */}
+          <h1 className="text-4xl font-display font-bold text-center mb-4 text-gray-800 dark:text-gray-100">
+            The Legendary{' '}
+            <span className="text-indigo-600 dark:text-indigo-400">
+              10 Song Album Game
+            </span>
+          </h1>
 
-        {/* Image centered below the title */}
-        <div className="flex justify-center mb-8">
-          <img
-            src="/pepeheadphone.svg"
-            alt="Game Logo"
-            className="w-32 h-32"
-          />
-        </div>
-
-        {/* Rules */}
-        <div className="space-y-6 text-gray-700 dark:text-gray-300">
-          {rules.map((rule, index) => {
-            const IconComponent = rule.icon;
-            return (
-              <div key={index}>
-                <h2 className="text-2xl font-display font-semibold mb-2 flex items-center">
-                  {/* Rule number */}
-                  <span className="mr-2">{index + 1}.</span>
-                  {/* Icon */}
-                  <IconComponent className="text-indigo-600 dark:text-indigo-400 mr-2" />
-                  {/* Rule title */}
-                  {rule.title}
-                </h2>
-                <p>{rule.description}</p>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Example Contribution Section */}
-        <div className="mt-12">
-          <h2 className="text-3xl font-display font-bold mb-4 text-center text-gray-800 dark:text-gray-100">
-            Example Contribution
-          </h2>
-          <p className="mb-4 text-center">
-            <strong>Theme:</strong> "Songs with Animals in the Title"
-          </p>
-          <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg">
-            <p className="mb-2">
-              <strong>Playlist #1:</strong> Songs with Animals in the Title
-            </p>
-            <ul className="space-y-2">
-              <li>
-                <strong>Track 1</strong> &gt; Artist: The Beatles &gt; Song:
-                "Blackbird" &gt;{' '}
-                <a
-                  href="https://youtu.be/Man4Xw8Xypo"
-                  className="text-blue-500 dark:text-blue-400 hover:underline"
-                >
-                  YouTube Link
-                </a>
-              </li>
-              <li>
-                <strong>Track 2</strong> &gt; Artist: Elton John &gt; Song:
-                "Crocodile Rock" &gt;{' '}
-                <a
-                  href="https://youtu.be/75r0nQu-hMs"
-                  className="text-blue-500 dark:text-blue-400 hover:underline"
-                >
-                  YouTube Link
-                </a>
-              </li>
-              <li>
-                <strong>Track 3</strong> &gt; Artist: Jefferson Airplane &gt;
-                Song: "White Rabbit" &gt;{' '}
-                <a
-                  href="https://youtu.be/WANNqr-vcx0"
-                  className="text-blue-500 dark:text-blue-400 hover:underline"
-                >
-                  YouTube Link
-                </a>
-              </li>
-            </ul>
+          {/* Image centered below the title */}
+          <div className="flex justify-center mb-8">
+            <img
+              src="/pepeheadphone.svg"
+              alt="Game Logo"
+              className="w-32 h-32"
+            />
           </div>
-        </div>
 
-        {/* Closing Statement with Animation */}
-        <p className="mt-12 text-center text-gray-600 dark:text-gray-400 animate-pulse">
-          Let's collaborate to create amazing playlists and enjoy some great
-          music together!
-        </p>
+          {/* Rules */}
+          <div className="space-y-6 text-gray-700 dark:text-gray-300">
+            {rules.map((rule, index) => {
+              const IconComponent = rule.icon;
+              return (
+                <div key={index}>
+                  <h2 className="text-2xl font-display font-semibold mb-2 flex items-center">
+                    {/* Rule number */}
+                    <span className="mr-2">{index + 1}.</span>
+                    {/* Icon */}
+                    <IconComponent className="text-indigo-600 dark:text-indigo-400 mr-2" />
+                    {/* Rule title */}
+                    {rule.title}
+                  </h2>
+                  <p>{rule.description}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Example Contribution Section */}
+          <div className="mt-12">
+            <h2 className="text-3xl font-display font-bold mb-4 text-center text-gray-800 dark:text-gray-100">
+              Example Contribution
+            </h2>
+            <p className="mb-4 text-center">
+              <strong>Theme:</strong> "Songs with Animals in the Title"
+            </p>
+            <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg">
+              <p className="mb-2">
+                <strong>Playlist #1:</strong> Songs with Animals in the Title
+              </p>
+              <ul className="space-y-2">
+                <li>
+                  <strong>Track 1</strong> &gt; Artist: The Beatles &gt; Song:
+                  "Blackbird" &gt;{' '}
+                  <a
+                    href="https://youtu.be/Man4Xw8Xypo"
+                    className="text-blue-500 dark:text-blue-400 hover:underline"
+                  >
+                    YouTube Link
+                  </a>
+                </li>
+                <li>
+                  <strong>Track 2</strong> &gt; Artist: Elton John &gt; Song:
+                  "Crocodile Rock" &gt;{' '}
+                  <a
+                    href="https://youtu.be/75r0nQu-hMs"
+                    className="text-blue-500 dark:text-blue-400 hover:underline"
+                  >
+                    YouTube Link
+                  </a>
+                </li>
+                <li>
+                  <strong>Track 3</strong> &gt; Artist: Jefferson Airplane &gt;
+                  Song: "White Rabbit" &gt;{' '}
+                  <a
+                    href="https://youtu.be/WANNqr-vcx0"
+                    className="text-blue-500 dark:text-blue-400 hover:underline"
+                  >
+                    YouTube Link
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Closing Statement with Animation */}
+          <p className="mt-12 text-center text-gray-600 dark:text-gray-400 animate-pulse">
+            Let's collaborate to create amazing playlists and enjoy some great
+            music together!
+          </p>
+        </div>
       </div>
     </div>
   );
