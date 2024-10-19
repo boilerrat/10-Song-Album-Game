@@ -199,7 +199,7 @@ yarn preview
 
 ## License
 
-This project is licensed under the [The Unlicense]([LICENSE](https://github.com/now-playing-DAO/10-Song-Album-Game/blob/main/LICENSE)).
+This project is licensed under the [The Unlicense](https://github.com/now-playing-DAO/10-Song-Album-Game/blob/main/LICENSE).
 
 ---
 
