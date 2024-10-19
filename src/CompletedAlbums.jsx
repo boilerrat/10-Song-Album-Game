@@ -1,7 +1,7 @@
 // CompletedAlbums.jsx
 import React from 'react';
 import Header from './Header';
-import albumsData from './albums.json';
+import albumsData from './albums';
 
 const CompletedAlbums = ({ theme, toggleTheme }) => {
   const albums = albumsData;
