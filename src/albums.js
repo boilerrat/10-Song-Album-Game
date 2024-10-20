@@ -1,5 +1,6 @@
 // albums.js
 import animalAlbumCover from './assets/animal-album-cover.png';
+import songsAboutTheSky from './assets/songsaboutthesky.png';
 
 const albums = [
   {
@@ -55,10 +56,68 @@ const albums = [
         artist: 'Grateful Dead',
         title: 'Dire Wolf',
         link: 'https://youtu.be/HJwZPfFCmho',
+      }, 
+    ],
+       playlistLink:
+      'https://youtube.com/playlist?list=PLmg6zt-2cPrloZFbhXjZcxLmXHJnVzvzs&si=Y_FBfRyHP2VrGryZ',
+  },
+  {
+    title: 'Songs with Animals in the Title',
+    coverImage: songsAboutTheSky,
+    tracks: [
+      {
+        artist: 'The Allman Brothers Band',
+        title: 'Blue Sky',
+        link: 'https://youtu.be/Man4Xw8Xypo',
+      },
+      {
+        artist: 'waiting',
+        title: 'waiting',
+        link: 'https://youtube.com/',
+      },
+      {
+        artist: 'waiting',
+        title: 'waiting',
+        link: 'https://youtube.com/',
+      },
+      {
+        artist: 'waiting',
+        title: 'waiting',
+        link: 'https://youtube.com/',
+      },
+      {
+        artist: 'waiting',
+        title: 'waiting',
+        link: 'https://youtube.com/',
+      },
+      {
+        artist: 'waiting',
+        title: 'waiting',
+        link: 'https://youtube.com/',
+      },
+      {
+        artist: 'waiting',
+        title: 'waiting',
+        link: 'https://youtube.com/',
+      },
+      {
+        artist: 'waiting',
+        title: 'waiting',
+        link: 'https://youtube.com/',
+      },
+      {
+        artist: 'waiting',
+        title: 'waiting',
+        link: 'https://youtube.com/',
+      },
+      {
+        artist: 'waiting',
+        title: 'waiting',
+        link: 'https://youtube.com/',
       },
     ],
-    playlistLink:
-      'https://youtube.com/playlist?list=PLmg6zt-2cPrloZFbhXjZcxLmXHJnVzvzs&si=Y_FBfRyHP2VrGryZ',
+       playlistLink:
+      'https://youtube.com/playlist?list=PLmg6zt-2cPrla1splqIieudLS4ZN78u9R&si=C-sC0ZM66Cobgn0y',
   },
 ];
 
