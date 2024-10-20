@@ -62,7 +62,7 @@ const albums = [
       'https://youtube.com/playlist?list=PLmg6zt-2cPrloZFbhXjZcxLmXHJnVzvzs&si=Y_FBfRyHP2VrGryZ',
   },
   {
-    title: 'Songs with Animals in the Title',
+    title: 'Songs About The Sky',
     coverImage: songsAboutTheSky,
     tracks: [
       {
