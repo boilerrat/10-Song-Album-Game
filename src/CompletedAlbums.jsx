@@ -38,7 +38,7 @@ const CompletedAlbums = ({ theme, toggleTheme }) => {
                   rel="noopener noreferrer"
                   className="text-blue-500 dark:text-blue-400 hover:underline"
                 >
-                  {track.artist} - "{track.title}"
+                  {`${track.artist} - "${track.title}"`}
                 </a>
               </li>
             ))}
